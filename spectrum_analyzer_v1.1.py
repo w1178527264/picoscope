@@ -111,9 +111,9 @@ class MainWindow(QtWidgets.QMainWindow):
         # Choose sampling frequency
         
         self.sampFreqBox = QtWidgets.QSpinBox()
-        self.sampFreqBox.setRange(1e4, 1e7)
-        self.sampFreqBox.setValue(1e7)
-        self.sampFreqBox.setSingleStep(1e4)
+        self.sampFreqBox.setRange(10**4, 10**7)
+        self.sampFreqBox.setValue(10**7)
+        self.sampFreqBox.setSingleStep(10**4)
         self.sampFreqBox.valueChanged.connect(self.setSampFreq)
         self.rate = 10e6
         self.sampFreqLabel = QtWidgets.QLabel('Sample Frequency (Hz)')
